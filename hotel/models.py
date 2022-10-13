@@ -3,6 +3,10 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 
 
+status = (
+    ("requested", "requested"), ("confirmed", "confirmed"), ("denied", "denied"))
+
+
 class Room(models.Model):
     """ Hotel rooms model """
     ROOM_CATEGORIES = (
@@ -18,12 +22,12 @@ class Room(models.Model):
     children = models.IntegerField()
 
     def __str__(self):
-        return f'{self.number}. {self.category} for {self.adults} adults and {self.children} children'
+        return str(self.number)
 
 
 class Customer(models.Model):
     """ Customer personal info model """
-    customer_id = models.AutoField
+    customer_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField(unique=True, null=True, blank=False)
@@ -43,7 +47,12 @@ class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
     check_in = models.DateField()
     check_out = models.DateField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(
+        max_length=10, choices=status, default="requested")
+
+    class Meta:
+        ordering = ['created_on']
 
     def __str__(self):
-        return f'{self.customer} has requested to book {self.room} from {self.check_in} to {self.check_out} for {self.num_adults} adult/s and {self.num_children} child/children'
-
+        return f'{self.room} booked by {self.customer}'
