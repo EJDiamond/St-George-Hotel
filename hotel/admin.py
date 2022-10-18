@@ -17,4 +17,4 @@ class CustomerAdmin(admin.ModelAdmin):
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     list_display = (
-        'customer', 'room', 'num_adults', 'num_children', 'check_in', 'check_out')
+        'customer', 'room', 'num_adults', 'num_children', 'check_in', 'check_out', 'status')

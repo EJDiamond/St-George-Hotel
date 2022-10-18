@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_form_tags %}
+
+<div>
+    <form method="POST">
+
+        {{ booking_form | crispy }}
+        {% csrf token %}
+        <button type="submit"></button>
+    </form>
+</div>
+
+{% endblock content %}
