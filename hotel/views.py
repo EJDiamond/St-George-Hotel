@@ -10,9 +10,10 @@ def index(request):
 
 
 class MakeBooking(View):
+
     def post(self, request, User=User, *args, **kwargs):
         booking_form = BookingForm(data=request.POST)
         customer_form = CustomerForm(data=request.POST)
 
         return render(
-            request, 'bookings.html',)
+            request, 'bookings.html')
