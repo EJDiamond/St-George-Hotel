@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% load crispy_form_tags %}
+{% load crispy_forms_tags %}
 
 <div>
     <form method="POST">
-
+        {% csrf_token %}
+        {{ form.as_p }}
         {{ booking_form | crispy }}
-        {% csrf token %}
+
         <button type="submit"></button>
     </form>
 </div>
 
-{% endblock content %}
+{% endblock %}

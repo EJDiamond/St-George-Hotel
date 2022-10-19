@@ -22,7 +22,7 @@ class Room(models.Model):
     children = models.IntegerField()
 
     def __str__(self):
-        return str(self.number)
+        return str(self.category)
 
 
 class Customer(models.Model):
