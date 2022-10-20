@@ -1,18 +1,22 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.contrib.auth.models import User
 from .models import Booking, Customer
 from .forms import BookingForm
 from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def index(request):
     return render(request, 'index.html')
 
 
-class MakeBooking(View):
+class MakeBooking(LoginRequiredMixin, View):
+    """ Allows customer to make a booking request if they are logged in"""
     booking_form = BookingForm
     template_name = 'bookings.html'
+    login_url = 'account_login'
+    redirect_field_name = 'index'
 
     def get(self, request, *args, **kwargs):
         form = self.booking_form()
@@ -21,6 +25,6 @@ class MakeBooking(View):
     def post(self, request, *args, **kwargs):
         form = self.booking_form(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('/success/')
+            form.save()
+            return render(request, self.template_name, {'form': form})
 
-        return render(request, self.template_name, {'form': form})
