@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.contrib.auth.models import User
-from .models import Booking, Customer
+from .models import Booking, Customer, Room
 from .forms import BookingForm, CustomerForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -20,13 +20,21 @@ class MakeBooking(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         form = self.booking_form()
-        return render(request, self.template_name, {'form': form})
+        rooms = Room.ROOM_CATEGORIES
+        return render(request, self.template_name, {'form': form, "rooms": rooms})
 
     def post(self, request, *args, **kwargs):
         form = self.booking_form(request.POST)
+
+        room_type = request.POST.get("room_type")
+
         if form.is_valid():
-            form.save()
-            return render(request, self.template_name, {'form': form})
+            instance = form.save(commit=False)
+            instance.user = User.objects.get(username=request.user.username)
+            instance.room = Room.objects.filter(category=room_type).first()
+            instance.save()
+
+        return render(request, self.template_name, {'form': form})
 
 
 class CustomerDetails(LoginRequiredMixin, View):
