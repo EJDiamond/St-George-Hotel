@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 
 body {
@@ -36,6 +36,7 @@ h2 {
     font-weight: 600;
     font-size: medium;
     color: #fff !important;
+    margin-left: 15px;
 }
 
 .logo-image {
@@ -43,6 +44,19 @@ h2 {
     height: 80px;
     overflow: hidden;
     margin-top: -6px;
+}
+
+.masthead {
+
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
 }
 
 .hero-image {
@@ -69,10 +83,81 @@ h2 {
     position: absolute;
     top: 45%;
     color: #fff;
+    left: 10%;
+    right: 10%;
 }
 
+.book-your-trip-btn {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
 
+.book-your-trip-btn:hover {
+    background: #fff;
+    color: #435115;
+}
 
 .datepicker {
     background-color: green;
+}
+
+/* Animations */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

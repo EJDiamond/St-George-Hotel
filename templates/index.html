@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Page Header -->
-<header class="masthead">
+<header class="masthead" onload="opacity='1'">
     <div class="hero-image container-fluid">
         <div class="overlay"></div>
         <div class="container">
@@ -15,7 +15,8 @@
                         <h1>Experience a new level of luxury</h1>
                         <h2>Where the finer things in life come together in one,</h2>
                         <h2>seamless, unforgettable experience.</h2>
-                        <button class="book-your-trip">Book Your Trip</button>
+                        <br>
+                        <a class="book-your-trip-btn" href="{% url 'book' %}">Book Your Trip</a>
                     </div>
 
                 </div>
