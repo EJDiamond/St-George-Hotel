@@ -1,3 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+Pro&display=swap');
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    z-index: 10;
+    font-weight: 700;
+    font-size: xxx-large;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    z-index: 10;
+    font-size: larger;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+
+}
+
+.navbar {
+    font-family: 'Playfair Display', serif;
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: x-large;
+    color: #fff;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: medium;
+    color: #fff !important;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+.hero-image {
+    background: url("https://res.cloudinary.com/ejdiamo/image/upload/v1666474204/St%20George%20Resort/reisetopia-VZUazRp0A1o-unsplash_1_eucdyg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -100px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.6;
+}
+
+.page-heading {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    color: #fff;
+}
+
+
+
 .datepicker {
     background-color: green;
 }
