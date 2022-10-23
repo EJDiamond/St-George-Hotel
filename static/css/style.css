@@ -18,7 +18,14 @@ h2 {
     font-size: larger;
     font-weight: 400;
     letter-spacing: 1.5px;
+}
 
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: small;
+    color: #435115;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .navbar {
@@ -99,6 +106,16 @@ h2 {
 
 .book-your-trip-btn:hover {
     background: #fff;
+    color: #435115;
+}
+
+.section-title {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.section-title h1 {
     color: #435115;
 }
 
