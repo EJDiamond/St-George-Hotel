@@ -3,6 +3,30 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+    <div class="hero-image-customer container-fluid">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <div class="page-heading">
+                        <h1>Let's get to know you ...</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="container col-lg-8 col-md-10 section-title">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h4>Your Details</h4>
+            <h1>For all your future bookings</h1>
+        </div>
+    </div>
+</section>
+
 <div class=" col-md-8 mt-3 offset-md-2 form-group">
     <form method="POST">
         {% csrf_token %}

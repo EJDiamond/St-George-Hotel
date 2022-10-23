@@ -115,6 +115,24 @@ h4 {
     text-align: left;
 }
 
+.hero-image-customer {
+    background: url("https://res.cloudinary.com/ejdiamo/image/upload/v1666534400/beach_cmgq8b.png");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -100px;
+}
+
+.hero-image-customer .overlay {
+    height: 50%;
+}
+
+.hero-image-customer .page-heading {
+    top: 25%;
+}
+
+
 .book-your-trip-btn {
     background: none;
     color: #fff;
