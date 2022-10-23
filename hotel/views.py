@@ -41,6 +41,7 @@ class MakeBooking(LoginRequiredMixin, View):
 class CustomerDetails(LoginRequiredMixin, View):
     """ Allows customer to save their personal details """
     customer_form = CustomerForm
+    form_class = CustomerForm
     template_name = 'customer_details.html'
     login_url = 'account_login'
     redirect_field_name = 'index'

@@ -3,13 +3,12 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div>
+<div class=" col-md-8 mt-3 offset-md-2 form-group">
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        {{ customer_form | crispy }}
-
-        <button type="submit"></button>
+        <br>
+        <input type="submit" value="SUBMIT" class="submit-btn">
     </form>
 </div>
 
