@@ -1,5 +1,5 @@
-// function datePicker() {
-//     $("#id_check_in").datePicker({
-//         dateFormat: 'dd/mm/yy'
-//     })
-// }
+// Change navbar background when scrolling
+
+$(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 250);
+});

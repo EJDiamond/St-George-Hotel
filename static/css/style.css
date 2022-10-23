@@ -57,6 +57,14 @@ h4 {
     z-index: 10;
 }
 
+.bg-dark {
+    background: transparent !important;
+}
+
+.bg-dark.scrolled {
+    background: #435115 !important;
+}
+
 .navbar-brand {
     font-weight: 700;
     font-size: x-large;
@@ -96,7 +104,6 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -100px;
 }
 
 .hero-image-booking {
@@ -105,7 +112,6 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -100px;
 }
 
 .overlay {
@@ -141,7 +147,6 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -100px;
 }
 
 .hero-image-customer .overlay {
@@ -151,7 +156,6 @@ h4 {
 .hero-image-customer .page-heading {
     top: 25%;
 }
-
 
 .book-your-trip-btn {
     background: none;
@@ -214,6 +218,7 @@ h4 {
     padding: 35px 10px;
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
 
 .card-body h1 {
@@ -301,8 +306,9 @@ footer {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 50px 100px;
+    padding: 50px 100px 20px;
     background: #435115;
+    margin-top: 50px;
 }
 
 footer .container {
