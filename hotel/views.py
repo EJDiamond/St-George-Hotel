@@ -52,7 +52,9 @@ class CustomerDetails(LoginRequiredMixin, View):
 
     def post(self, request, *args, **kwargs):
         form = self.customer_form(request.POST)
+
         if form.is_valid():
             form.save()
+            return redirect(reverse('index'))
+        else:
             return render(request, self.template_name, {'form': form})
-
