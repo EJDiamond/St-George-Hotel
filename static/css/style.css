@@ -17,7 +17,15 @@ h2 {
     z-index: 10;
     font-size: larger;
     font-weight: 400;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 600;
 }
 
 h4 {
@@ -75,6 +83,15 @@ h4 {
     margin-top: -100px;
 }
 
+.hero-image-booking {
+    background: url("https://res.cloudinary.com/ejdiamo/image/upload/v1666524817/St%20George%20Resort/stairway_vo6opq.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -100px;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -92,6 +109,10 @@ h4 {
     color: #fff;
     left: 10%;
     right: 10%;
+}
+
+.hero-image-booking .page-heading {
+    text-align: left;
 }
 
 .book-your-trip-btn {
@@ -112,15 +133,25 @@ h4 {
 .section-title {
     text-align: center;
     margin: 50px auto;
-    width: 80%;
 }
 
 .section-title h1 {
     color: #435115;
 }
 
-.datepicker {
-    background-color: green;
+.submit-btn {
+    background: #fff;
+    color: #435115;
+    border: 3px solid #435115;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.submit-btn:hover {
+    background: #435115;
+    color: #fff;
 }
 
 /* Animations */

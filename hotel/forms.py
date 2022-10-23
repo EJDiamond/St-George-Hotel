@@ -11,12 +11,19 @@ class DateInput(forms.DateInput):
 
 
 class BookingForm(forms.ModelForm):
-    check_in = forms.DateField(widget=DateInput(attrs={'class': 'datepicker'}))
-    check_out = forms.DateField(widget=DateInput)
+    check_in = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
+    check_out = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
 
     class Meta:
         model = Booking
         fields = ('num_adults', 'num_children', 'check_in', 'check_out',)
+        labels = {
+            "num_adults": "Adults", "num_children": "Children"
+        }
+        widgets = {
+            'num_adults': forms.Select(attrs={'class': 'form-control'}),
+            'num_children': forms.Select(attrs={'class': 'form-control'}),
+        }
 
 
 class CustomerForm(forms.ModelForm):

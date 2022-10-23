@@ -3,20 +3,48 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div>
+
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+    <div class="hero-image-booking container-fluid">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <div class="page-heading">
+                        <h3>Book Online</h3>
+                        <h1>A place to stay.</h1>
+                        <h1>Just a few steps away ...</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="container col-lg-8 col-md-10 section-title">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h4>Book Now</h4>
+            <h1>Reservations at St. George Resort</h1>
+        </div>
+    </div>
+</section>
+
+
+<div class=" col-md-8 mt-3 offset-md-2 form-group">
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        {{ booking_form | crispy }}
 
-        <label for="room_type">Room</label>
-        <select name="room_type" id="room_type">
+        <label for="room_type">Room Type</label>
+        <select name="room_type" id="room_type" class="form-control">
             {% for room in rooms %}
             <option value="{{ room.0 }}">{{ room.1 }}</option>
             {% endfor %}
         </select>
-
-        <input type="submit" value="Submit">
+        <br>
+        <input type="submit" value="SUBMIT" class="submit-btn">
     </form>
 </div>
 {% endblock %}

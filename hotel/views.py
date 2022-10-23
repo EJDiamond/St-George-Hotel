@@ -14,6 +14,7 @@ def index(request):
 class MakeBooking(LoginRequiredMixin, View):
     """ Allows customer to make a booking request if they are logged in"""
     booking_form = BookingForm
+    form_class = BookingForm
     template_name = 'bookings.html'
     login_url = 'account_login'
     redirect_field_name = 'index'
