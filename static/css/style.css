@@ -52,6 +52,14 @@ h4 {
     font-weight: 600;
 }
 
+h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: medium;
+    color: #435115;
+    font-style: italic;
+    font-weight: 600;
+}
+
 .navbar {
     font-family: 'Playfair Display', serif;
     z-index: 10;
@@ -336,7 +344,6 @@ footer {
     height: auto;
     padding: 50px 100px 20px;
     background: #435115;
-    margin-top: 50px;
 }
 
 footer .container {
@@ -407,6 +414,10 @@ footer ul {
     margin-top: 30px;
 }
 
+.room-details .card-title {
+    margin-left: 30px;
+}
+
 .room-features {
     margin-top: 20px;
     display: grid;
@@ -417,7 +428,18 @@ footer ul {
 
 .features li {
     display: inline-grid;
+}
 
+.room-details h5 {
+    margin-left: 30px;
+}
+
+.price {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 40px;
+    text-align: center;
 }
 
 /* Animations */
