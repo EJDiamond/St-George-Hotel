@@ -30,8 +30,60 @@
         </div>
     </div>
 </section>
+<section class="room-list grey-background">
+    <div class="row row-cols-1 row-cols-md-4 g-4 mb-3 mx-auto" style="max-width: 90%;">
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://res.cloudinary.com/ejdiamo/image/upload/v1666540065/St%20George%20Resort/poolview_mhpvui.png"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Poolside</h4>
+                    <p class="card-text">Twin/ Double<br />
+                        2 Adults<br />
+                        Breakfast not included</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://res.cloudinary.com/ejdiamo/image/upload/v1666540065/St%20George%20Resort/garden-view_oso2o6.png"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Garden View</h4>
+                    <p class="card-text">King size<br />
+                        2 Adults<br />
+                        Breakfast not included</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://res.cloudinary.com/ejdiamo/image/upload/v1666540065/St%20George%20Resort/oceanview_f214td.png"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Ocean View</h4>
+                    <p class="card-text">Queen size + Single<br />
+                        2 Adults + 1 Child (2-12)<br />
+                        Breakfast included</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="https://res.cloudinary.com/ejdiamo/image/upload/v1666540087/St%20George%20Resort/superiorocean_avd5kd.png"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">Superior Ocean Suite</h4>
+                    <p class="card-text">Queen size + Double<br />
+                        2 Adults + 2 Children (0-12)<br />
+                        Breakfast included</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
+<!-- Booking form -->
 <div class=" col-md-8 mt-3 offset-md-2 form-group">
     <form method="POST">
         {% csrf_token %}
@@ -47,4 +99,17 @@
         <input type="submit" value="SUBMIT" class="submit-btn">
     </form>
 </div>
+
+<!-- Contact Info -->
+<section class="container col-lg-8 col-md-10 section-title">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1>For information contact us today.</h1>
+            <br>
+            <br>
+            <h2><i class="fa-solid fa-phone-flip"></i> +64345098767 &ensp; <i class="fa-solid fa-envelope"></i>
+                Reception@stgeorge.com</h2>
+        </div>
+    </div>
+</section>
 {% endblock %}

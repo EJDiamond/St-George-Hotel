@@ -157,6 +157,18 @@ h4 {
     top: 25%;
 }
 
+.hero-image-rooms {
+    background: url("https://res.cloudinary.com/ejdiamo/image/upload/v1666569384/St%20George%20Resort/loungers_tyhbbz.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-image-rooms .page-heading {
+    text-align: left;
+}
+
 .book-your-trip-btn {
     background: none;
     color: #fff;
@@ -204,15 +216,15 @@ h4 {
 
 /* Carousel */
 
-.carousel-control-prev-icon {
+.room-carousel .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23435115' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
-.carousel-control-next-icon {
+.room-carousel .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23435115' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-/* Carousel cards */
+/* Index Carousel cards */
 
 .card-body {
     padding: 35px 10px;
@@ -300,6 +312,22 @@ h4 {
     padding-bottom: 50px;
 }
 
+.room-list {
+    padding-bottom: 50px;
+}
+
+.room-list p {
+    font-size: small;
+}
+
+.card-body h1 {
+    font-size: xx-large;
+}
+
+.card-body li {
+    list-style: none;
+}
+
 /* Footer */
 
 footer {
@@ -322,6 +350,7 @@ footer .container {
 footer h1 {
     color: #fff;
     padding-bottom: 30px;
+    font-size: xx-large;
 }
 
 footer p {
@@ -368,6 +397,28 @@ footer ul {
     color: #fff;
 }
 
+/* Room details */
+
+.room-details {
+    margin-top: 50px;
+}
+
+.room-details .col {
+    margin-top: 30px;
+}
+
+.room-features {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 60px;
+    text-align: center;
+}
+
+.features li {
+    display: inline-grid;
+
+}
 
 /* Animations */
 
