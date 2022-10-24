@@ -15,6 +15,10 @@ def rooms(request):
     return render(request, 'rooms.html')
 
 
+def spa(request):
+    return render(request, 'spa.html')
+
+
 class MakeBooking(LoginRequiredMixin, View):
     """ Allows customer to make a booking request if they are logged in"""
     booking_form = BookingForm

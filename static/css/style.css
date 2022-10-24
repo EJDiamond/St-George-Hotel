@@ -173,9 +173,22 @@ h5 {
     background-repeat: no-repeat;
 }
 
+.hero-image-spa {
+    background: url("https://res.cloudinary.com/ejdiamo/image/upload/v1666642606/St%20George%20Resort/spahero_z8fein.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .hero-image-rooms .page-heading {
     text-align: left;
 }
+
+.hero-image-spa .page-heading {
+    text-align: left;
+}
+
 
 .book-your-trip-btn {
     background: none;
@@ -439,6 +452,21 @@ footer ul {
     display: grid;
     grid-template-columns: repeat(2, 150px);
     gap: 40px;
+    text-align: center;
+}
+
+/* Spa card */
+
+.spa-card h1 {
+    margin-left: 10px;
+}
+
+.spa-card li {
+    list-style: circle;
+}
+
+.terms {
+    font-size: x-small;
     text-align: center;
 }
 
