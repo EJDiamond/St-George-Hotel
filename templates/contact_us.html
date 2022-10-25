@@ -10,40 +10,34 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10">
                     <div class="page-heading">
-                        <h1>Let's get to know you ...</h1>
+                        <h1>Get in touch with us ...</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<section class="container col-lg-8 col-md-10 section-title">
-    <div class="row justify-content-center">
-        <div class="col-12">
-            <h4>Your Details</h4>
-            <h1>For all your future bookings</h1>
-        </div>
-    </div>
-</section>
-
+<br>
+<!-- Contact us form -->
 <div class="container">
     <div class=" col-md-8 mt-3 offset-md-2 form-group">
         <form method="post">
             {% csrf_token %}
             <label for="fname" class="form-label"> Your Name</label>
-            <input name="name" type="text" class="form-control" id="fname" placeholder="Your Name ...">
+            <input name="name" type="text" class="form-control" id="fname" placeholder="Your Name ..." required>
 
             <label for="exampleInputEmail1" class="form-label">Your Email</label>
             <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Your email ...">
+                placeholder="Your email ..." required>
 
             <label for="subject">Message</label>
-            <textarea name="subject" class="form-control" id="subject" name="subject"
-                placeholder="Your Message ..."></textarea>
+            <textarea name="subject" class="form-control" id="subject" name="subject" placeholder="Your Message ..."
+                required></textarea>
             <br>
             <input type="submit" value="SUBMIT" class="submit-btn">
         </form>
     </div>
 </div>
+<br>
 
 {% endblock %}
