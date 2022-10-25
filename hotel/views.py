@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from django.views import View
+from django.views.generic import ListView, View
 from django.contrib.auth.models import User
 from .models import Booking, Customer, Room, Contact
 from .forms import BookingForm, CustomerForm
@@ -9,6 +9,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 def index(request):
     return render(request, 'index.html')
+
+
+class BookingList(ListView):
+    model = Booking
 
 
 def contactus(request):
@@ -80,3 +84,4 @@ class CustomerDetails(LoginRequiredMixin, View):
             return redirect(reverse('index'))
         else:
             return render(request, self.template_name, {'form': form})
+

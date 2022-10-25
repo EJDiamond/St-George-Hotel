@@ -9,4 +9,5 @@ urlpatterns = [
     path('booking', views.MakeBooking.as_view(), name='book'),
     path('customer', views.CustomerDetails.as_view(), name='customer'),
     path('contactus', views.contactus, name='contactus'),
+    path('bookinglist', views.BookingList, name='bookinglist'),
 ]
