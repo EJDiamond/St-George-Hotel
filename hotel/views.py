@@ -11,10 +11,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-class BookingList(ListView):
-    model = Booking
-
-
 def contactus(request):
     if request.method == 'POST':
         contact = Contact()
@@ -85,3 +81,6 @@ class CustomerDetails(LoginRequiredMixin, View):
         else:
             return render(request, self.template_name, {'form': form})
 
+
+class BookingList(ListView):
+    model = Booking
