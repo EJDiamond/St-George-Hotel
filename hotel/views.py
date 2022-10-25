@@ -1,14 +1,28 @@
 from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.contrib.auth.models import User
-from .models import Booking, Customer, Room
+from .models import Booking, Customer, Room, Contact
 from .forms import BookingForm, CustomerForm
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def index(request):
     return render(request, 'index.html')
+
+
+def contactus(request):
+    if request.method == 'POST':
+        contact = Contact()
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        contact.name = name
+        contact.email = email
+        contact.subject = subject
+        contact.save()
+        return HttpResponse("<h1>Thanks for contacting us!</h1>")
+    return render(request, 'contact_us.html')
 
 
 def rooms(request):

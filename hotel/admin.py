@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Booking, Customer
+from .models import Room, Booking, Customer, Contact
 
 # Register your models here.
 
@@ -18,3 +18,9 @@ class CustomerAdmin(admin.ModelAdmin):
 class BookingAdmin(admin.ModelAdmin):
     list_display = (
         'customer', 'room', 'num_adults', 'num_children', 'check_in', 'check_out', 'status')
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = (
+        'name', 'email', 'subject')
