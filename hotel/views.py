@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import generic, View
 from django.contrib.auth.models import User
 from .models import Booking, Contact
@@ -62,3 +62,17 @@ def my_bookings(request):
         'bookings': bookings
     }
     return render(request, 'my_bookings.html', context)
+
+
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('mybookings')
+    form = BookingForm(instance=booking)
+    context = {
+        'form': form
+        }
+    return render(request, 'edit_booking.html', context)

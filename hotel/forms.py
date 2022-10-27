@@ -4,6 +4,7 @@ from .models import Booking
 from django.forms import fields, ModelForm
 from django.conf import settings
 from phonenumber_field.formfields import PhoneNumberField
+from django.utils import timezone
 
 
 class DateInput(forms.DateInput):
@@ -18,7 +19,7 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ('full_name', 'email', 'phone_number', 'room_type', 'num_adults', 'num_children', 'check_in', 'check_out',)
+        fields = ('full_name', 'email', 'phone_number', 'room', 'num_adults', 'num_children', 'check_in', 'check_out',)
         labels = {
             "num_adults": "Adults", "num_children": "Children"
         }
@@ -28,7 +29,7 @@ class BookingForm(forms.ModelForm):
             'num_adults': forms.Select(attrs={'class': 'form-control'}),
             'num_adults': forms.Select(attrs={'class': 'form-control'}),
             'num_children': forms.Select(attrs={'class': 'form-control'}),
-            'room_type': forms.Select(attrs={'class': 'form-control'}),
+            'room': forms.Select(attrs={'class': 'form-control'}),
         }
 
 

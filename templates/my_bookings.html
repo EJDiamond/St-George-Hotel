@@ -2,6 +2,42 @@
 
 {% block content %}
 
-{{ bookings }}
-
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+    <div class="hero-image-customer container-fluid">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <div class="page-heading">
+                        <h1>Get in touch with us ...</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+<table>
+    {% for booking in bookings %}
+    <tr>
+        <td>{{ booking.full_name }}</td>
+        <td>{{ booking.get_room_display }}</td>
+        <td>{{ booking.num_adults }}</td>
+        <td>{{ booking.num_children }}</td>
+        <td>{{ booking.check_in }}</td>
+        <td>{{ booking.check_out }}</td>
+        <td>{{ booking.status }}</td>
+        <td>
+            <a href="/edit/{{ booking.id}}">
+                <button>Edit</button>
+            </a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td>You still need to book a holiday!</td>
+    </tr>
+    {% endfor%}
+</table>
 {% endblock %}

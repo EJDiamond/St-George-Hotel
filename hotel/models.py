@@ -21,7 +21,7 @@ class Booking(models.Model):
     child_numbers = ((0, "0 children"), (1, "1 child"), (2, "2 children"))
     num_adults = models.IntegerField(choices=adult_numbers, default=1)
     num_children = models.IntegerField(choices=child_numbers, default=0)
-    room_type = models.IntegerField(choices=room_choices, default=1)
+    room = models.IntegerField(choices=room_choices, default=1)
     check_in = models.DateField()
     check_out = models.DateField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -32,7 +32,7 @@ class Booking(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f"{self.room_type} booked from {self.check_in} to {self.check_out}"
+        return f"{self.room} booked from {self.check_in} to {self.check_out}"
 
 
 class Contact(models.Model):
