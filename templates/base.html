@@ -69,15 +69,7 @@
                     </li>
 
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'customer' %}">Customer Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'personalinfo' %}">Personal Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'bookinglist' %}">Manage Bookings</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
