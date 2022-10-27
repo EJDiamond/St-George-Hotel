@@ -13,6 +13,8 @@ class DateInput(forms.DateInput):
 class BookingForm(forms.ModelForm):
     check_in = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
     check_out = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
+    phone_number = PhoneNumberField(widget=forms.TextInput(
+        attrs={'class': 'form-control', 'placeholder': ('Please enter in +44 format')}))
 
     class Meta:
         model = Booking
@@ -21,6 +23,8 @@ class BookingForm(forms.ModelForm):
             "num_adults": "Adults", "num_children": "Children"
         }
         widgets = {
+            'full_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'num_adults': forms.Select(attrs={'class': 'form-control'}),
             'num_adults': forms.Select(attrs={'class': 'form-control'}),
             'num_children': forms.Select(attrs={'class': 'form-control'}),
