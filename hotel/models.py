@@ -55,7 +55,7 @@ class Booking(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f'{self.room} booked by {self.customer}'
+        return f"{self.room} booked from {self.check_in} to {self.check_out}"
 
 
 class Contact(models.Model):

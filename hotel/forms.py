@@ -16,13 +16,14 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ('num_adults', 'num_children', 'check_in', 'check_out',)
+        fields = ('customer', 'num_adults', 'num_children', 'check_in', 'check_out',)
         labels = {
             "num_adults": "Adults", "num_children": "Children"
         }
         widgets = {
             'num_adults': forms.Select(attrs={'class': 'form-control'}),
             'num_children': forms.Select(attrs={'class': 'form-control'}),
+            'customer': forms.Select(attrs={'class': 'form-control'}),
         }
 
 
