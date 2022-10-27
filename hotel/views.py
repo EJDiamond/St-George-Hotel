@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from django.views.generic import ListView, View
+from django.views import generic, View
 from django.contrib.auth.models import User
 from .models import Booking, Contact
 from .forms import BookingForm
@@ -54,3 +54,11 @@ class MakeBooking(LoginRequiredMixin, View):
             instance.save()
 
         return render(request, self.template_name, {'form': form})
+
+
+def my_bookings(request):
+    bookings = Booking.objects.all()
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'my_bookings.html', context)
