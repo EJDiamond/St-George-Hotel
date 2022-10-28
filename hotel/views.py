@@ -22,7 +22,9 @@ def contactus(request):
         contact.email = email
         contact.subject = subject
         contact.save()
-        return HttpResponse("<h1>Thanks for contacting us!</h1>")
+        messages.success(request, 'Thanks for contacting us, we will respond shortly.')
+        return render(request, 'index.html')
+
     return render(request, 'contact_us.html')
 
 
@@ -53,7 +55,7 @@ class MakeBooking(LoginRequiredMixin, View):
             instance = form.save(commit=False)
             instance.user = User.objects.get(username=request.user.username)
             instance.save()
-            messages.success(request, 'Booking request submitted successfully, please check back for approved status')
+            messages.success(request, 'Booking request submitted successfully, check back in "My Bookings" for approved status')
             return render(request, "index.html", {'form': form})
         else:
             messages.error(request, 'You need to pick a date in the future.')
