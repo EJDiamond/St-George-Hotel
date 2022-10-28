@@ -566,6 +566,10 @@ footer ul {
 /* Footer */
 
 @media (max-width: 991px) {
+    .navbar-collapse {
+        background: #435115;
+    }
+
     footer {
         padding: 40px;
     }
