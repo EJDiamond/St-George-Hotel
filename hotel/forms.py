@@ -4,7 +4,8 @@ from .models import Booking
 from django.forms import fields, ModelForm
 from django.conf import settings
 from phonenumber_field.formfields import PhoneNumberField
-from django.utils import timezone
+import datetime
+from django.core.exceptions import ValidationError
 
 
 class DateInput(forms.DateInput):
@@ -12,7 +13,7 @@ class DateInput(forms.DateInput):
 
 
 class BookingForm(forms.ModelForm):
-    check_in = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
+    check_in = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}), required=True)
     check_out = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
     phone_number = PhoneNumberField(widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': ('Please enter in +44 format')}))
@@ -31,6 +32,12 @@ class BookingForm(forms.ModelForm):
             'num_children': forms.Select(attrs={'class': 'form-control'}),
             'room': forms.Select(attrs={'class': 'form-control'}),
         }
+
+    def clean_check_in(self):
+        check_in = self.cleaned_data['check_in']
+        if check_in < datetime.date.today():
+            raise forms.ValidationError("The date can't be in the past!")
+        return date
 
 
 class ContactForm(forms.Form):

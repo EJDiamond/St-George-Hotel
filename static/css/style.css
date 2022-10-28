@@ -68,6 +68,7 @@ h5 {
     background: transparent !important;
 }
 
+/* Changes navbar to green when scrolled */
 .bg-dark.scrolled {
     background: #435115 !important;
 }

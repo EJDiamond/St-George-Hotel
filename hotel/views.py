@@ -5,6 +5,7 @@ from .models import Booking, Contact
 from .forms import BookingForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 
 def index(request):
@@ -52,8 +53,12 @@ class MakeBooking(LoginRequiredMixin, View):
             instance = form.save(commit=False)
             instance.user = User.objects.get(username=request.user.username)
             instance.save()
+            messages.success(request, 'Booking request submitted successfully.')
+            return render(request, "index.html", {'form': form})
+        else:
+            messages.error(request, 'You need to pick a date in the future.')
 
-        return render(request, self.template_name, {'form': form})
+        return render(request, "bookings.html", {'form': form})
 
 
 def my_bookings(request):
