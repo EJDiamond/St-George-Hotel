@@ -61,7 +61,7 @@ h5 {
 
 .navbar {
     font-family: 'Playfair Display', serif;
-    z-index: 10;
+    z-index: 2;
 }
 
 .bg-dark {
@@ -91,6 +91,10 @@ h5 {
     height: 80px;
     overflow: hidden;
     margin-top: -6px;
+}
+
+.message {
+    z-index: 10;
 }
 
 .masthead {

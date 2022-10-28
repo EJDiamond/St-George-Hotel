@@ -53,7 +53,7 @@ class MakeBooking(LoginRequiredMixin, View):
             instance = form.save(commit=False)
             instance.user = User.objects.get(username=request.user.username)
             instance.save()
-            messages.success(request, 'Booking request submitted successfully.')
+            messages.success(request, 'Booking request submitted successfully, please check back for approved status')
             return render(request, "index.html", {'form': form})
         else:
             messages.error(request, 'You need to pick a date in the future.')
@@ -75,6 +75,8 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
+            messages.success(
+                request, 'Booking has been modified, check back for booking status.')
             return redirect('mybookings')
     form = BookingForm(instance=booking)
     context = {
@@ -86,4 +88,6 @@ def edit_booking(request, booking_id):
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
+    messages.success(
+        request, 'You have successfully cancelled your booking')
     return redirect('mybookings')

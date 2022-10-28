@@ -17,9 +17,22 @@
                         <h3>Book Online</h3>
                         <h1>A place to stay.</h1>
                         <h1>Just a few steps away ...</h1>
-                        {% include 'messages.html' %}
+                        <!-- Django messages -->
+                        <div class="container message">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2">
+                                    {% for message in messages %}
+                                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg"
+                                        role="alert">
+                                        {{ message | safe }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>

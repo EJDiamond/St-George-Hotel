@@ -14,7 +14,7 @@ class DateInput(forms.DateInput):
 
 class BookingForm(forms.ModelForm):
     check_in = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}), required=True)
-    check_out = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}))
+    check_out = forms.DateField(widget=DateInput(attrs={'class': 'form-control'}), required=True)
     phone_number = PhoneNumberField(widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': ('Please enter in +44 format')}))
 
@@ -37,7 +37,13 @@ class BookingForm(forms.ModelForm):
         check_in = self.cleaned_data['check_in']
         if check_in < datetime.date.today():
             raise forms.ValidationError("The date can't be in the past!")
-        return date
+        return check_in
+
+    def clean_check_out(self):
+        check_out = self.cleaned_data['check_out']
+        if check_out < datetime.date.today():
+            raise forms.ValidationError("The date can't be in the past!")
+        return check_out
 
 
 class ContactForm(forms.Form):
