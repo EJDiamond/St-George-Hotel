@@ -3,19 +3,33 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block title %}Sign In{% endblock %}
 
 {% block content %}
-
-<div class="container">
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+  <div class="hero-image-customer container-fluid">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <div class="page-heading">
+            <h1>Welcome back!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<br>
+<div class="container sign-in">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign In" %}</h3>
+      <h1>{% trans "Sign In" %}</h1>
 
-      <p>{% blocktrans %}Welcome back to St George Resort. To make/modify a booking, please log in. If
-        you
-        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}</p>
+      <p>{% blocktrans %}Welcome back to St George Resort!<br />To make/modify a booking, please log in. If
+        you have not yet registered, then please <a class="link" href="{{ signup_url }}">sign up</a>.
+        {% endblocktrans %}</p>
     </div>
   </div>
   <div class="row">
@@ -26,9 +40,10 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+        <button class="submit-btn" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
 </div>
+<br>
 {% endblock %}

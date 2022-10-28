@@ -2,13 +2,30 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block title %}Log Out{% endblock %}
+
 
 {% block content %}
-<div class="container">
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+  <div class="hero-image-customer container-fluid">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <div class="page-heading">
+            <h1>Off to pack your bags ...</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<br>
+<div class="container log-out">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign Out" %}</h3>
+      <h1>{% trans "Sign Out" %}</h1>
 
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
     </div>
@@ -21,9 +38,13 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
+        <div class="container">
+          <button class="submit-btn" type="submit">{% trans 'Sign Out' %}</button>
+          <a href="{% url 'index' %}" class="submit-btn">Cancel</a>
+        </div>
       </form>
     </div>
   </div>
 </div>
+<br>
 {% endblock %}

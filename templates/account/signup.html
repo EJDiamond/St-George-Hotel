@@ -2,16 +2,32 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock %}
+{% block title %}Register{% endblock %}
 
 {% block content %}
-<div class="container">
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+  <div class="hero-image-customer container-fluid">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <div class="page-heading">
+            <h1>Join us in paradise ...</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<br>
+<div class="container sign-up">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign Up" %}</h3>
+      <h1>{% trans "Register" %}</h1>
 
       <p>{% blocktrans %}Welcome back to St George Resort. Do you already have an account? Then please <a class="link"
-          href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
+          href="{{ login_url }}"> sign in</a> instead.{% endblocktrans %}</p>
     </div>
   </div>
   <div class="row">
@@ -22,10 +38,11 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <button class="submit-btn" type="submit">{% trans "Sign Up" %} &raquo;</button>
       </form>
     </div>
   </div>
 </div>
+<br>
 
 {% endblock %}

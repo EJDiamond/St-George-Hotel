@@ -9,7 +9,6 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     display: grid;
-    justify-content: end;
     min-height: 100vh;
     align-content: end;
 }
@@ -467,6 +466,28 @@ footer ul {
 
 .terms {
     font-size: x-small;
+    text-align: center;
+}
+
+
+/* Allauth pages */
+
+.sign-in,
+.sign-up,
+.log-out {
+    text-align: center;
+}
+
+.sign-up a {
+    color: #435115;
+}
+
+.sign-in a {
+    color: #435115;
+}
+
+.log-out-btns {
+    max-width: fit-content;
     text-align: center;
 }
 
