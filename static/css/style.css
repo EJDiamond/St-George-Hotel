@@ -495,6 +495,13 @@ footer ul {
     text-align: center;
 }
 
+/* My bookings page */
+
+.table {
+    display: block !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+}
 
 /* Allauth pages */
 
