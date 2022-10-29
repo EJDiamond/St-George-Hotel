@@ -440,19 +440,24 @@ footer ul {
 }
 
 .room-details .card-title {
-    margin-left: 30px;
+    margin: auto;
 }
 
 .room-features {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 80px);
-    gap: 60px;
+    gap: 30px;
     text-align: center;
+    justify-content: center;
+    padding-left: unset;
+    align-items: baseline;
 }
 
 .features li {
     display: inline-grid;
+    justify-content: center;
+    justify-content: center;
 }
 
 .room-details h5 {
@@ -461,10 +466,9 @@ footer ul {
 
 .price {
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    gap: 40px;
     text-align: center;
+    display: inline-flex;
+    justify-content: space-evenly;
 }
 
 .how-to {
@@ -581,10 +585,41 @@ footer ul {
     footer {
         padding: 40px;
     }
-}
 
-@media (max-width: 768px) {
-    footer .container {
-        grid-template-columns: repeat(1, 1fr);
+    .room-features {
+        gap: 12px;
     }
-}
+
+    .room-features li i {
+        font-size: x-large;
+    }
+
+    .price {
+        margin-top: 0px;
+    }
+
+    @media (max-width: 852px) {
+        .room-features {
+            gap: 5px;
+            margin-top: 0;
+            grid-template-columns: repeat(3, 70px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        footer .container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .room-features {
+            margin-top: 20px;
+            grid-template-columns: repeat(3, 80px);
+            gap: 30px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .room-features {
+            grid-template-columns: repeat(3, 60px);
+        }
+    }
