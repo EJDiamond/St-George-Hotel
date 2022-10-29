@@ -1,6 +1,6 @@
 from django.contrib.auth import models
 from django import forms
-from .models import Booking
+from .models import Booking, Contact
 from django.forms import fields, ModelForm
 from django.conf import settings
 from phonenumber_field.formfields import PhoneNumberField
@@ -30,9 +30,10 @@ class BookingForm(forms.ModelForm):
             "num_adults": "Adults", "num_children": "Children"
         }
         widgets = {
-            'full_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'num_adults': forms.Select(attrs={'class': 'form-control'}),
+            'full_name': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'Your Name'}),
+            'email': forms.EmailInput(
+                attrs={'class': 'form-control', 'placeholder': 'Your Email Address'}),
             'num_adults': forms.Select(attrs={'class': 'form-control'}),
             'num_children': forms.Select(attrs={'class': 'form-control'}),
             'room': forms.Select(attrs={'class': 'form-control'}),
