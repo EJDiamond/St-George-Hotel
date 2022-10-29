@@ -645,3 +645,30 @@ footer ul {
         grid-template-columns: repeat(3, 60px);
     }
 }
+
+@media (max-width: 1149px) {
+    .card-btns {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1021px) {
+    .card-btns .book-room-btn {
+        margin-left: 0px;
+        font-size: small;
+        margin-top: 10px;
+    }
+
+    .card-btns {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .card-btns {
+        display: block;
+        margin-left: 30px;
+    }
+}
