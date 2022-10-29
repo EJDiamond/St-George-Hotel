@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<header class="masthead" onload="opacity='1'">
+    <div class="hero-image-booking container-fluid">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <div class="page-heading">
+                        <h1>Page not found!</h1>
+                        <h2>Sorry the page you were looking for doesn't exist.</h2>
+                        <h2>Find your way back:</h2>
+                        <br>
+                        <a class="book-your-trip-btn" href="{% url 'index' %}">Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}

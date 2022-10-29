@@ -22,3 +22,6 @@ urlpatterns = [
     path('', include('hotel.urls')),
     path('accounts/', include('allauth.urls')),
 ]
+
+
+handler404 = "hotel.views.error_404"

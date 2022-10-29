@@ -524,6 +524,7 @@ footer ul {
     text-align: center;
 }
 
+
 /* Animations */
 
 @keyframes fadein {
@@ -582,11 +583,13 @@ footer ul {
 
 /* Media Queries */
 
-/* Footer */
-
 @media (max-width: 991px) {
     .navbar-collapse {
         background: #435115;
+    }
+
+    .navbar-brand {
+        text-align: center;
     }
 
     footer {
@@ -604,29 +607,34 @@ footer ul {
     .price {
         margin-top: 0px;
     }
+}
 
-    @media (max-width: 852px) {
-        .room-features {
-            gap: 5px;
-            margin-top: 0;
-            grid-template-columns: repeat(3, 70px);
-        }
+@media (max-width: 852px) {
+    .room-features {
+        gap: 5px;
+        margin-top: 0;
+        grid-template-columns: repeat(3, 70px);
+    }
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    @media (max-width: 768px) {
-        footer .container {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .room-features {
-            margin-top: 20px;
-            grid-template-columns: repeat(3, 80px);
-            gap: 30px;
-        }
+    .room-features {
+        margin-top: 20px;
+        grid-template-columns: repeat(3, 80px);
+        gap: 30px;
     }
 
-    @media (max-width: 400px) {
-        .room-features {
-            grid-template-columns: repeat(3, 60px);
-        }
+    h1 {
+        font-size: xx-large;
     }
+}
+
+@media (max-width: 400px) {
+    .room-features {
+        grid-template-columns: repeat(3, 60px);
+    }
+}

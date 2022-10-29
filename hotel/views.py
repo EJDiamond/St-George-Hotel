@@ -8,7 +8,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 
 
-
 def index(request):
     return render(request, 'index.html')
 
@@ -98,3 +97,7 @@ def delete_booking(request, booking_id):
     messages.success(
         request, 'You have successfully cancelled your booking')
     return redirect('mybookings')
+
+
+def error_404(request, exception):
+    return render(request, '404.html')
