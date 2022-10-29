@@ -25,3 +25,4 @@ urlpatterns = [
 
 
 handler404 = "hotel.views.error_404"
+handler404 = "hotel.views.error_500"

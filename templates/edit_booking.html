@@ -51,12 +51,14 @@
 
 <!-- Booking form -->
 <div class=" col-md-8 mt-3 offset-md-2 form-group">
+    {% for booking in user.booking_set.all %}
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <br>
         <input type="submit" value="UPDATE" class="submit-btn">
     </form>
+    {% endfor %}
 </div>
 
 <!-- Contact Info -->

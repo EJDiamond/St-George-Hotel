@@ -6,6 +6,7 @@ from .forms import BookingForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
+from django.http import Http404
 
 
 def index(request):
@@ -99,5 +100,11 @@ def delete_booking(request, booking_id):
     return redirect('mybookings')
 
 
+# 404 error page
 def error_404(request, exception):
     return render(request, '404.html')
+
+
+# 500 server error page
+def error_500(request, exception):
+    return render(request, '500.html')

@@ -191,6 +191,13 @@ h5 {
     text-align: left;
 }
 
+.hero-image-404 {
+    background: url("https://res.cloudinary.com/ejdiamo/image/upload/v1667057439/ocean_zp2c2a.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .book-your-trip-btn {
     background: none;
