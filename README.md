@@ -8,11 +8,15 @@ For my project four milestone project I have created a hotel website with bookin
 
 # Table of contents
 1. [User Experience](#user-experience(ux))
-    - [Strategy](##strategy)
-    - [User Stories](##userstories)
-    - [Scope](##scope)
-    - [Structure](##structure)
-        - [Database](###database)
+    - [Strategy](#strategy)
+    - [User Stories](#userstories)
+    - [Scope](#scope)
+    - [Structure](#structure)
+        - [Database](#database)
+        - [Skeleton](#skeleton)
+        - [Surface](#surface)
+    - [Features](#features)
+        - [Homepage](#homepage)
 
 
 # User Experience(UX)
@@ -77,7 +81,92 @@ I have used two models to store the information for the hotel app, Booking and C
 
 ![Models](/assets/images/models.png)
 
-### Wireframes
+### Skeleton
+
+St. George resort wireframes can also be viewed [here](https://github.com/EJDiamond/St-George-Resort/blob/main/assets/images/hotel-wireframes.png).
+
+![Wireframes](/assets/images/hotel-wireframes.png)
+
+Produced website differs slightly from wireframes as bootstrap features such as cards and carousels allowed me to enhance the website further.
+
+### Surface
+
+I chose to use a simple colour scheme of green and white as I felt the overall look of the website was clean and more appealing to the eye.
+
+![Green](/assets/images/colour.png)
+
+I chose the two fonts Playfair Display and Source Sans Pro:
+
+- Playfair Display was used for all heading in a heavy font weight depending on whether it was a H1, H2 etc.
+- Source Sans Pro was used across the body of the site as well as for some sub headings as I felt it complimented the H1 headings effectively.
+
+
+## Features
+
+
+#### - __Navigation Bar__
+
+The navigation bar has links to all the pages the users are able to access, the page title allows the user to know which page they are viewing. As the page is scrolled the nav bar turns green so that white text can still be visible to the user.
+
+![NavBar](/assets/images/navbar.png)
+![Green NavBar](/assets/images/green-nav.png)
+
+
+#### - __Navigation Bar Mobile__
+
+On a smaller screen device the navigation bar condenses to toggle form and and the background of the drop down menu is set to green so again the text can be viewed on the white background of the pages.
+
+![Mobile NavBar](/assets/images/mobile-landing.png) ![Mobile NavBar](/assets/images/mobile-nav-green.png)
+
+
+#### - __Room View Carousel__
+
+The rooms choices are displayed on an automatic carousel which allows the user to view all the rooms and has link to view the details of the room on the accomodation page and to book the room on the bookings page.
+
+![Room Carousel](/assets/images/room-carousel.png)
+
+
+#### - __Activities__
+
+The activities and excursions the resort has to offer are displayed on the landing page in a grid format which is resposive and displays in column form when viewed on smaller devices.
+
+![Activites](/assets/images/activities.png)
+
+
+#### - __Accomodation__
+
+This page displays the rooms and their features. Each room type is presented with a carousel with a number of images of each room, displayed next to the name and the features of the room type. There is a link to the booking page on each room. These cards are responsive and therefore shrink to fit smaller screen sizes.
+
+![Footer](/assets/images/room-info.png)
+
+
+#### - __Booking__
+
+The booking page presents the four room types in small cards above the booking form the remind the user of the room types. Below is the booking form used to send a booking request to the resort using the booking model.
+
+![Booking Form](/assets/images/booking-form.png)
+
+
+#### - __Contact Us__
+
+This page allows the user to send the resort a message with a simple user friendly form using the contact model.
+
+![Contact Form](/assets/images/contact-form.png)
+
+
+#### - __My Bookings__
+
+The my bookings page shows the user the bookings they have request and their details. From here the user can see if the request has been approved as well as select to edit and delete their booking.
+
+![My Bookings](/assets/images/my-bookings.png)
+
+
+#### - __Edit Bookings__
+
+From the my bookings edit booking link the user is sent to the booking form with all the booking details already in, from here they can change an aspect of the booking they require.]
+
+![Edit Bookings](/assets/images/edit-booking.png)
+
 
 
 
