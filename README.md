@@ -16,7 +16,6 @@ For my project four milestone project I have created a hotel website with bookin
         - [Skeleton](#skeleton)
         - [Surface](#surface)
     - [Features](#features)
-        - [Homepage](#homepage)
 
 
 # User Experience(UX)
