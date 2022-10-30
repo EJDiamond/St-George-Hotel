@@ -4,11 +4,13 @@ from django.contrib.auth.models import User
 
 
 status = (
-    ("requested", "Requested"), ("confirmed", "Confirmed"), ("denied", "Denied"))
+    ("requested", "Requested"),
+    ("confirmed", "Confirmed"), ("denied", "Denied"))
 
 
 room_choices = (
-    (1, "Poolside View"), (2, "Garden View"), (3, "Ocean View"), (4, "Superior Ocean Suite"))
+    (1, "Poolside View"),
+    (2, "Garden View"), (3, "Ocean View"), (4, "Superior Ocean Suite"))
 
 
 class Booking(models.Model):

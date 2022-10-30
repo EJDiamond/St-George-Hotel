@@ -48,7 +48,8 @@ class TestBookingForm(TestCase):
             form.errors['room'][0], 'This field is required.')
 
     def test_fields_are_explicit_in_form_metaclass(self):
-        """ Check the Meta fields are equal to that defined in the Meta class """
+        """ Check the Meta fields are equal to
+        that defined in the Meta class """
         form = BookingForm()
         self.assertTrue(form.Meta.fields, [
             'full_name',

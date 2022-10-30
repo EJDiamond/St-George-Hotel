@@ -69,4 +69,3 @@ class TestBookingViews(TestCase):
         self.client.logout()
         response = self.client.get(self.booking_url)
         self.assertRedirects(response, '/accounts/login/?index=/booking')
-
