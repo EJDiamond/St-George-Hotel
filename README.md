@@ -366,4 +366,4 @@ I have tested this code myself on multiple screen sizes as well as asking friend
 
 ## Automated Testing
 
-I used Coverage library whilst testing to see how much of my Python code was included in the tests I have written, the report which can be found [here](https://8000-ejdiamond-stgeorgeresor-bkqcl9asbtz.ws-eu73.gitpod.io/htmlcov/) shows that 86% of my code was covered, the remaining code is covered by manual testing.
+I used Coverage library whilst testing to see how much of my Python code was included in the tests I have written, the report which can be found [here](https://8000-ejdiamond-stgeorgeresor-bkqcl9asbtz.ws-eu73.gitpod.io/htmlcov/), shows that 86% of my code was covered, the remaining code is covered by manual testing.
