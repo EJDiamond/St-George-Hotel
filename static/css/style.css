@@ -18,6 +18,14 @@ p {
     opacity: 0.7;
 }
 
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 600;
+}
+
 h2 {
     font-family: 'Playfair Display', serif;
     z-index: 10;
@@ -32,14 +40,6 @@ h3 {
     font-size: larger;
     font-weight: 400;
     letter-spacing: 1px;
-}
-
-h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    z-index: 10;
-    text-transform: uppercase;
-    font-size: medium;
-    font-weight: 600;
 }
 
 h4 {
