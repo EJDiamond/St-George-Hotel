@@ -511,6 +511,8 @@ footer ul {
 
 /* My bookings page */
 
+/* Making table scrollable to can still be used on smaller screens */
+
 .table {
     display: block !important;
     overflow-x: auto !important;
