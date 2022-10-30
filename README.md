@@ -170,3 +170,4 @@ From the my bookings edit booking link the user is sent to the booking form with
 
 
 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fst-george-resort.herokuapp.com%2F
