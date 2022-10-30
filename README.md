@@ -16,6 +16,7 @@ For my project four milestone project I have created a hotel website with bookin
         - [Skeleton](#skeleton)
         - [Surface](#surface)
     - [Features](#features)
+2. [Technologies Used](#technologies-used)
 
 
 # User Experience(UX)
@@ -167,7 +168,66 @@ From the my bookings edit booking link the user is sent to the booking form with
 ![Edit Bookings](/assets/images/edit-booking.png)
 
 
+# Technologies Used
+
+- [Django](https://www.djangoproject.com/)
+    - Frame works used to build the project and its app.
+
+- [Python](https://www.python.org/)
+    - Programming language used to write all of the code in the website.
+
+- [Github](https://github.com/)
+    - Used to save project code from Git.
+
+- [Gitpod](https://www.gitpod.io/)
+    - The develpment environment used to build project.
+
+- [Boostrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    - Used for creating the layout and ensuring responsive design
+
+- [SQLite](https://www.sqlite.org/index.html)
+    - Used to run local database test
+
+- [PostGres](https://www.postgresql.org/)
+    - Herokus Postgres database used to store data once deployed
+
+- [Drawspl](https://drawsql.app/)
+    - Used to mock up models for database
+
+- [Heroku](https://www.heroku.com)
+    - Platform used to build and host site.
+
+- [Pep8](http://pep8online.com/)
+    - Used to test code for issues
+
+- [Adobe Illustrator](https://www.adobe.com/)
+    - Used to build wireframes and do all image resizing
+
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store all images
+
+- [Favicon.io](https://favicon.io/)
+    - Used to create favicon for site
+
+- [FontAwesome](https://fontawesome.com/)
+    - Used to get items form my contact details and room features
+
+- [Google Fonts](https://fonts.google.com/)
+    - Used to get fonts for the project.
+
+-[Google Developer Tools](https://developer.chrome.com/docs/devtools/)
+    - Used to fix css issues whilst building the project
+
+- [AmIResponsive](https://ui.dev/amiresponsive)
+    - Used to create image to show the site is responsive
 
 
 
+
+
+
+
+html
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fst-george-resort.herokuapp.com%2F
+css
+https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fst-george-resort.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
