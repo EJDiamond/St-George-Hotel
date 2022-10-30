@@ -116,7 +116,7 @@ The navigation bar has links to all the pages the users are able to access, the 
 
 On a smaller screen device the navigation bar condenses to toggle form and and the background of the drop down menu is set to green so again the text can be viewed on the white background of the pages.
 
-![Mobile NavBar](/assets/images/mobile-landing.png) ![Mobile NavBar](/assets/images/mobile-nav-green.png)
+![Mobile NavBar](/assets/images/mobile-landing.png) ![Mobile NavBar](/assets/images/mobile-navbar.png)
 
 
 #### - __Room View Carousel__
@@ -215,7 +215,7 @@ From the my bookings edit booking link the user is sent to the booking form with
 - [Google Fonts](https://fonts.google.com/)
     - Used to get fonts for the project.
 
--[Google Developer Tools](https://developer.chrome.com/docs/devtools/)
+- [Google Developer Tools](https://developer.chrome.com/docs/devtools/)
     - Used to fix css issues whilst building the project
 
 - [AmIResponsive](https://ui.dev/amiresponsive)
