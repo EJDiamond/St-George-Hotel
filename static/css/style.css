@@ -58,6 +58,22 @@ h5 {
     font-weight: 600;
 }
 
+h6 {
+    font-family: 'Playfair Display', serif;
+    z-index: 10;
+    font-weight: 700;
+    font-size: xx-large;
+    color: #435115;
+}
+
+h7 {
+    font-family: 'Playfair Display', serif;
+    z-index: 10;
+    font-weight: 700;
+    font-size: xxx-large;
+    color: white;
+}
+
 .navbar {
     font-family: 'Playfair Display', serif;
     z-index: 2;
@@ -636,6 +652,10 @@ footer ul {
     }
 
     h1 {
+        font-size: xx-large;
+    }
+
+    h7 {
         font-size: xx-large;
     }
 }
