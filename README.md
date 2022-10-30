@@ -4,6 +4,7 @@ For my project four milestone project I have created a hotel website with bookin
 
 [View live project](https://st-george-resort.herokuapp.com/)
 
+
 ![Responsive image](/assets/images/responsive.png)
 
 # Table of contents
@@ -17,6 +18,12 @@ For my project four milestone project I have created a hotel website with bookin
         - [Surface](#surface)
     - [Features](#features)
 2. [Technologies Used](#technologies-used)
+3. [Testing](#testing)
+    - [Code Validation](#codevalidation)
+    - [Manual Testing](#manualtesting)
+    - [Automated Testing](#automatedtesting)
+        - [Website Functionality](#websitefunctionality)
+        - [Admin Functionality](#adminfunctionality)
 
 
 # User Experience(UX)
@@ -41,7 +48,7 @@ As many people view website on smaller  screen devices I have allowed for this b
 
 ## User Stories
 
-My user stories can also be found [here](https://github.com/users/EJDiamond/projects/5)
+My user stories can also be found [here](https://github.com/users/EJDiamond/projects/5).
 
 1. As a user I can easily navigate the site to find desired content to decide if I want to stay at the hotel.
 2. As a user I can find useful information about the hotel on the home page so I can spend less time browsing the site.
@@ -133,11 +140,18 @@ The activities and excursions the resort has to offer are displayed on the landi
 ![Activites](/assets/images/activities.png)
 
 
+#### - __Footer__
+
+The footer displays all the hotel contact details including the address, location and social links.
+
+![Footer](/assets/images/footer.png)
+
+
 #### - __Accomodation__
 
 This page displays the rooms and their features. Each room type is presented with a carousel with a number of images of each room, displayed next to the name and the features of the room type. There is a link to the booking page on each room. These cards are responsive and therefore shrink to fit smaller screen sizes.
 
-![Footer](/assets/images/room-info.png)
+![Rooms](/assets/images/room-info.png)
 
 
 #### - __Booking__
@@ -163,7 +177,7 @@ The my bookings page shows the user the bookings they have request and their det
 
 #### - __Edit Bookings__
 
-From the my bookings edit booking link the user is sent to the booking form with all the booking details already in, from here they can change an aspect of the booking they require.]
+From the my bookings edit booking link the user is sent to the booking form with all the booking details prepopulated, from here they can change an aspect of the booking they require.
 
 ![Edit Bookings](/assets/images/edit-booking.png)
 
@@ -221,13 +235,135 @@ From the my bookings edit booking link the user is sent to the booking form with
 - [AmIResponsive](https://ui.dev/amiresponsive)
     - Used to create image to show the site is responsive
 
+# Testing
+
+A combination of both manual and automated testing has been used to check the webistes functionality.
+
+## Code Validation
+
+#### - __W3C Markup Validation Service__
+
+ - Used to validate the html code used in the website, the results can be found [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fst-george-resort.herokuapp.com%2F).
 
 
+#### - __W3C CSS Validation Service__
+
+- Used to validate the css code used in the website, the results can be found [here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fst-george-resort.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+).
+
+#### - __Pep8__
+
+- Used to test the code for any errors.
+
+#### - __Lighthouse__
+
+- Used to test the code for accessibility.
+
+## Manual Testing
+
+I have tested this code myself on multiple screen sizes as well as asking friends and family to review on different size devices.
+
+### Website Functionality
+
+1. User Story: I can easily navigate the site to find desired content to decide if I want to stay at the hotel.
+    - Test Case: 001 - User navigates landing page -> Clicks on links and buttons to view other webpages and see what the resort has to offer.
+    - Test: Passed
+2. User Story: As a user I can find useful information about the hotel on the home page so I can spend less time browsing the site.
+    - Test Case: 002 - User browsers the landing page and finds rooms details, activity details and information on hotel contact and location.
+    - Test: Passed
+    ![Room Carousel](/assets/images/room-carousel.png)
+    ![Footer](/assets/images/footer.png)
+
+3. User Story: As a user I can use a navigation bar to move around the site with ease.
+    - Test Case: 003 - User navigates landing page -> Uses navigation bar to move around the site with ease, when the page is scrolled the navigation bar changes to a green background so the text is stil readable. When view on smaller devices the navigation become a toggle menu for a better user experience.
+    - Test: Passed
+    ![Navbar](/assets/images/transparent-nav.png)
+    ![Green Navbar](/assets/images/green-navbar.png)
+
+4. User Story: As a user I can see the name of the page in the browser window so that I know which page I am viewing.
+    - Test Case: 004 - User navigates around the site and the page title lets them know what page they are on. The example below shows the user on the booking page.
+    - Test: Passed
+    ![Page Title](/assets/images/page-name.png)
+
+5. User Story: As a user I can contact the hotel via a form so that I can ask additional questions.
+    - Test Case: 005 - User navigates to 'contact us' link in the navigation bar, once there, they are presented with a form which is send to the database. This feature can be used whether or not the site user is logged in.
+    - Test: Passed
+    ![Contact Form](/assets/images/contact-form.png)
+
+6. User Story: As a user I am notified that my contact form has been sent.
+    - Test Case: 006 - User fills in contact form and clicks submit, the user is redirected to the homepage and a message pops up to tell them that their message has been sent to the resort.
+    - Test: Passed
+    ![Contact Form Message](/assets/images/contact-message.png)
+
+7. User Story: As a user I can see activities and excursions the hotel has to offer.
+    - Test Case: 007 - User navigates down the landing page and finds the activities and excursions section. The user can also locate the spa page by clicking the spa link in the navigation bar.
+    - Test: Passed
+    ![Activity Section](/assets/images/all-activities.png)
+    ![Spa Page](/assets/images/spa.png)
 
 
+### Admin Functionality
+
+1. User Story: As an admin user I can log in so that I can view bookings and contact forms on the backend.
+    - Test Case: 009 - Admin user navigates to the login link on navigation bar and logs in. The data is presented, showing the users, bookings and any contact that has been made.
+    - Test: Passed
+    ![Admin Database](/assets/images/database.png)
+
+2. User Story: As an admin user I can edit and/or delete bookings so that I can assist any customers who need help modifying their booking.
+    - Test Case: 010 - Admin user logs in and opens database from here they can add/edit bookings.
+    - Test: Passed
+    ![Admin Add Booking](/assets/images/admin-add-booking.png)
+    ![Admin Edit Booking](/assets/images/admin-booking.png)
 
 
-html
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fst-george-resort.herokuapp.com%2F
-css
-https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fst-george-resort.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+3. User Story: As an admin user I can change customer booking status from requested to confirmed.
+    - Test Case: 011 - Admin user logs in and opens database from here they can change the customer booking status to confirmed or denied.
+    - Test: Passed
+    ![Booking Confirmed](/assets/images/confirmed.png)
+    ![Booking Denied](/assets/images/denied.png)
+
+### User Authentication
+
+1. As a user I can register an account so that I can view/manage my booking requests.
+    - Test Case: 012 - Users navigates to the register link in the navigation bar and fills in registration form, once they have successully submitted they will be redirected to the homepage and a message will pop up telling them they are registerd.
+    - Test: Passed
+    ![User Registered](/assets/images/register.png)
+    ![User Bookings](/assets/images/bookings.png)
+
+2. User Story: As a registered user I can login to my account so that I can manage my bookings.
+    - Test Case: 013 - Registered user clicks login link in navigation bar and fills user credentials in the login form. Once logged in they are navigated back to the homepage and a message telling them they successfully logged in pops up.
+    - Test: Passed
+    ![User Logged in](/assets/images/login.png)
+
+3. User Story: As a registered user I can see clearly if I'm logged in, so that I can either log in or out.
+    - Test Case: 014 - User logs in, when they are logged in they will have an option to log out in the top right of navbar, hence letting them know they are logged in.
+    - Test: Passed
+    ![Confirm Logged in](/assets/images/logged-in.png)
+
+4. User Story: As a registered user, I can log out of my account so that I am signed out securely.
+    - Test Case: 015 - Logged in user selects to log out and confirms, they are redirected to the homepage and a message tells them they have successfully logged out.
+    - Test: Passed
+    ![User Signed Out](/assets/images/sign-out.png)
+
+### Reservation Functionality
+
+1. User Story: As a user I can request to book a room so that I can stay at the hotel.
+    - Test Case: 008 - Logged in user navigates to the booking page by selecting a 'book now' link on either the navigation bar or by using the various 'book now' buttons across the site. They are sent to the booking page where they are prompted to fill in their details. If a date selected is in the past the user will see an error message, 'must select a future date' and will be sent back to the prepopulated form. Once the booking has been requested they will be redirected to the homepage and see a 'thanks for your booking' message.
+    - Test: Passed
+    ![Select Date In Future Error](/assets/images/incorrect-date.png)
+    ![Booking Success](/assets/images/booking-success.png)
+
+2. User Story: As a registered user I can edit my booking request so that I can make any changes needed.
+    - Test Case: 016 - Logged in user can navigate to 'my bookings' in the navigation bar and select which booking they wish to modify with the edit button. They will be sent to the booking form prepopulated with their booking details, which they can change and submit. Once submitted they will recieve a confirmation messsage.
+    - Test: Passed
+    ![Edit Booking](/assets/images/edit-bookings.png)
+    ![Edit Booking Confirmed](/assets/images/confirmed.png)
+
+3. User Story: As a registered user I can delete my booking request so that I can cancel my stay if needed.
+    - Test Case: 017 - Logged in user can navigate to 'my bookings' in the navigation bar and select which booking they wish to cancel with the cancel booking button. They will be shown a pop message to tell them that their booking has been cancelled.
+    - Test: Passed
+    ![Cancel Booking](/assets/images/cancel-booking.png)
+
+## Automated Testing
+
+I used Coverage library whilst testing to see how much of my Python code was included in the tests I have written, the report which can be found [here](https://8000-ejdiamond-stgeorgeresor-bkqcl9asbtz.ws-eu73.gitpod.io/htmlcov/) shows that 86% of my code was covered, the remaining code is covered by manual testing.
