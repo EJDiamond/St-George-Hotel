@@ -18,7 +18,7 @@ p {
     opacity: 0.7;
 }
 
-h1 {
+h2 {
     font-family: 'Playfair Display', serif;
     z-index: 10;
     font-weight: 700;
@@ -26,7 +26,7 @@ h1 {
     color: #435115;
 }
 
-h2 {
+h3 {
     font-family: 'Source Sans Pro', sans-serif;
     z-index: 10;
     font-size: larger;
@@ -34,7 +34,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-h3 {
+h1 {
     font-family: 'Source Sans Pro', sans-serif;
     z-index: 10;
     text-transform: uppercase;
@@ -62,24 +62,8 @@ h6 {
     font-family: 'Playfair Display', serif;
     z-index: 10;
     font-weight: 700;
-    font-size: xx-large;
+    font-size: xxx-large;
     color: #435115;
-}
-
-.masthead h6 {
-    font-family: 'Playfair Display', serif;
-    z-index: 10;
-    font-weight: 700;
-    font-size: xxx-large;
-    color: white;
-}
-
-.card-title h6 {
-    font-family: 'Playfair Display', serif;
-    z-index: 10;
-    font-weight: 700;
-    font-size: xxx-large;
-    color: white;
 }
 
 .navbar {
@@ -167,7 +151,7 @@ h6 {
     right: 10%;
 }
 
-.page-heading h1 {
+.page-heading h2 {
     color: #fff;
 }
 
@@ -243,7 +227,7 @@ h6 {
     margin: 50px auto;
 }
 
-.section-title h1 {
+.section-title h2 {
     color: #435115;
 }
 
@@ -287,7 +271,7 @@ h6 {
     z-index: 3;
 }
 
-.card-body h1 {
+.card-body h2 {
     color: #435115;
     padding: 15px 5px;
     font-size: xxx-large;
@@ -341,12 +325,6 @@ h6 {
     padding: 50px;
 }
 
-.section-title h2 {
-    color: #435115;
-    text-transform: uppercase;
-    font-size: medium;
-}
-
 /* Experience cards */
 
 .experiences .row {
@@ -374,12 +352,17 @@ h6 {
     font-size: small;
 }
 
-.card-body h1 {
+.card-body h2 {
     font-size: xx-large;
 }
 
 .card-body li {
     list-style: none;
+}
+
+.section-title h3 {
+    color: #435115;
+    font-size: x-large;
 }
 
 /* Footer */
@@ -392,7 +375,7 @@ footer {
     background: #435115;
 }
 
-footer h1 {
+footer h2 {
     color: #fff;
     padding-bottom: 30px;
     font-size: xx-large;
@@ -513,7 +496,7 @@ footer ul {
 
 /* Spa card */
 
-.spa-card h1 {
+.spa-card h2 {
     margin-left: 10px;
 }
 
@@ -659,11 +642,7 @@ footer ul {
         gap: 30px;
     }
 
-    h1 {
-        font-size: xx-large;
-    }
-
-    .masthead h6 {
+    h2 {
         font-size: xx-large;
     }
 }
