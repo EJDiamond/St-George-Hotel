@@ -12,6 +12,7 @@ body {
     align-content: end;
 }
 
+/* Text styling */
 p {
     font-family: 'Source Sans Pro', sans-serif;
     color: #212529;
@@ -66,6 +67,7 @@ h6 {
     color: #435115;
 }
 
+/* Navbar */
 .navbar {
     font-family: 'Playfair Display', serif;
     z-index: 2;
@@ -104,6 +106,7 @@ h6 {
     z-index: 10;
 }
 
+/* Hero Image Sections */
 .masthead {
     -webkit-animation: fadein 2s;
     /* Safari, Chrome and Opera > 12.1 */
@@ -222,6 +225,7 @@ h6 {
     color: #435115;
 }
 
+/* Section Titles */
 .section-title {
     text-align: center;
     margin: 50px auto;
@@ -231,6 +235,7 @@ h6 {
     color: #435115;
 }
 
+/* Submit Buttons */
 .submit-btn {
     background: #fff;
     color: #435115;
@@ -253,7 +258,6 @@ h6 {
 
 
 /* Carousel */
-
 .room-carousel .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23435115' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
@@ -263,7 +267,6 @@ h6 {
 }
 
 /* Index Carousel cards */
-
 .card-body {
     padding: 35px 10px;
     display: flex;
@@ -384,7 +387,6 @@ footer h2 {
 footer p {
     color: #fff;
 }
-
 
 .map-responsive {
     overflow: hidden;

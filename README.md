@@ -29,6 +29,7 @@ For my project four milestone project I have created a hotel website with bookin
     - [Github and Gitpod](#github-and-gitpod)
     - [Heroku](#heroku)
         - [Initial Set Up](#initial-set-up)
+        - [Creating Heroku Application](#creating-heroku-application)
 6. [Credits](#credits)
 7. [Acknowledgements](#acknowledgements)
 
@@ -104,9 +105,10 @@ Produced website differs slightly from wireframes as bootstrap features such as 
 
 ### Surface
 
-I chose to use a simple colour scheme of green and white as I felt the overall look of the website was clean and more appealing to the eye.
+I chose to use a simple colour scheme of green, grey and white as I felt the overall look of the website was clean and more appealing to the eye.
 
 ![Green](/assets/images/colour.png)
+![Grey](/assets/images/grey.png)
 
 I chose the two fonts Playfair Display and Source Sans Pro:
 
@@ -429,47 +431,15 @@ To create my project I used the [Code Institute Gitpod Full Template](https://gi
 
 To create the application I followed the [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
 
-- __In Heroku__
-    1. Create a new
-     Heroku App with location set to Europe.
-    2. Add the Postgres database, located in the resource, add ons tab.
-
-- __In Gitpod__
-
-    3. Create env.py file
-
-- __In env.py__
-
-    4. Import os library ```import os```
-    5. Set environment variables ```os.environ["DATABASE_URL"] = "Heroku DATABASE_URL Link"```
-    6. Add in secret key ```os.environ["SECRET_KEY"] = "Make up a randomSecretKey"```
-
-- __In Heroku__
-
-    7. Add Secret Key to Config Vars SECRET_KEY, “randomSecretKey”
-
-- __In Settings.py__
-
-    8. Reference env.py ```from pathlib import Path```
-                        ```import os```
-                        ```import dj_database_url```
-                        ```if os.path.isfile("env.py"):```
-                        ```import env```
-10. Remove the insecure secret
-key and replace - links to the
-secret key variable on Heroku
-SECRET_KEY = os.environ.get('SECRET_KEY')
-11. Replace DATABASES Section
-(Comment out the old
-DataBases Section)
-- links to the DATATBASE_URL
-variable on Heroku
-DATABASES = {
-'default':
-dj_database_url.parse(os.environ.get("DATABASE_
-URL"))
-}
-
+1. Create a requirements.txt file in order for Heroku to install project dependencies ```pip3 freeze --local > requirements.txt```.
+2. Add a ```Procfile```
+3. Login to Heroku and create a new app with the location set to Europe.
+4. In the Heroku settings, reveal Config Vars and add SECRET KEY and CLOUDINARY URL.
+5. In the resources tab, add Heroku Postgres.
+6. Connect the Github repository to Heroku by selecting Deploy and selecting Github - Connect to Github.
+7. Search for your project name and select Connect.
+8. Select Enable Automatic Deploy.
+9. Before deploying final project, set Debug to False and remove DISABLE_COLLECTSTATIC.
 
 # Acknowledgements
 
