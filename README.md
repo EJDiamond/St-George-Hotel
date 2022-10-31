@@ -365,7 +365,7 @@ I have tested this code myself on multiple screen sizes as well as asking friend
     - Test Case: 016 - Logged in user can navigate to 'my bookings' in the navigation bar and select which booking they wish to modify with the edit button. They will be sent to the booking form prepopulated with their booking details, which they can change and submit. Once submitted they will recieve a confirmation messsage.
     - Test: Passed
     ![Edit Booking](/assets/images/edit-bookings.png)
-    ![Edit Booking Confirmed](/assets/images/confirmed.png)
+    ![Edit Booking Confirmed](/assets/images/edit-confirmed.png)
 
 3. User Story: As a registered user I can delete my booking request so that I can cancel my stay if needed.
     - Test Case: 017 - Logged in user can navigate to 'my bookings' in the navigation bar and select which booking they wish to cancel with the cancel booking button. They will be shown a pop message to tell them that their booking has been cancelled.
