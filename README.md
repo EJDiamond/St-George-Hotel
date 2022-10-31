@@ -267,6 +267,14 @@ A combination of both manual and automated testing has been used to check the we
 
 - Used to test the code for accessibility.
 
+![Light House Results](/assets/images/lighthouse.png)
+
+#### - __Coolors Contrast Checker__
+- Used to check the contract of the foreground and background colors.
+
+![Green check](/assets/images/green-check.png)
+![White check](/assets/images/white-check.png)
+
 ## Manual Testing
 
 I have tested this code myself on multiple screen sizes as well as asking friends and family to review on different size devices.
