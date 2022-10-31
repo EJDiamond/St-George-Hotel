@@ -19,12 +19,18 @@ For my project four milestone project I have created a hotel website with bookin
     - [Features](#features)
 2. [Technologies Used](#technologies-used)
 3. [Testing](#testing)
-    - [Code Validation](#codevalidation)
-    - [Manual Testing](#manualtesting)
-    - [Automated Testing](#automatedtesting)
-        - [Website Functionality](#websitefunctionality)
-        - [Admin Functionality](#adminfunctionality)
-
+    - [Code Validation](#code-validation)
+    - [Manual Testing](#manual-testing)
+    - [Automated Testing](#automated-testing)
+        - [Website Functionality](#website-functionality)
+        - [Admin Functionality](#admin-functionality)
+        - [Bugs and Fixes](#bugs-and-fixes)
+5. [Deployment](#deployment)
+    - [Github and Gitpod](#github-and-gitpod)
+    - [Heroku](#heroku)
+        - [Initial Set Up](#initial-set-up)
+6. [Credits](#credits)
+7. [Acknowledgements](#acknowledgements)
 
 # User Experience(UX)
 
@@ -367,3 +373,104 @@ I have tested this code myself on multiple screen sizes as well as asking friend
 ## Automated Testing
 
 I used Coverage library whilst testing to see how much of my Python code was included in the tests I have written, the report which can be found [here](https://8000-ejdiamond-stgeorgeresor-bkqcl9asbtz.ws-eu73.gitpod.io/htmlcov/), shows that 86% of my code was covered, the remaining code is covered by manual testing.
+
+## Bugs and Fixes
+
+- After passing my code through the HTML validator, I recieved the error "H1 headings must be highest headings on the page", so I went back through my CSS and switched around heading classes to pass the validation.
+
+- My ifame used for the google map in my footer showed up some outdated styling features on the validator, they were not needed to I removed them from the HTML file.
+
+# Credits
+
+During the development of my project I used a number of resources to help me tackle problems and fix bugs.
+
+[DatePicker](https://mrasimzahid.medium.com/how-to-implement-django-datepicker-calender-in-forms-date-field-9e23479b5db)
+
+[CSS Fade In](https://stackoverflow.com/questions/11679567/using-css-for-a-fade-in-effect-on-page-load)
+
+[Carousel Arrow Colour](https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel)
+
+[Scrolling NavBar](https://www.youtube.com/watch?v=xYA2bcEHKg8)
+
+[Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend)
+
+[Django Phone Number](https://pypi.org/project/django-phonenumber-field/)
+
+[Sourced Images - Unsplash](https://unsplash.com/)
+
+[Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+# Deployment
+
+## Github and Gitpod
+
+To create my project I used the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+- Click the Use This Template button.
+- Add a repository name and brief description.
+- Click the Create Repository from Template to create your repository.
+- To create a Gitpod workspace you then need to click Gitpod, this can take a few minutes.
+
+## Heroku
+
+### Initial Set Up
+
+1. Install Django and gunicorn: ```pip3 install django gunicorn```
+2. Install supporting libraries: ```pip3 install dj_database_url psycopg2```
+3. Install Cloudinary Libraries ```pip3 install dj3-cloudinary-storage```
+4. Create requirements file pip3 ```freeze --local > requirements.txt```
+5. Create Project ```django-admin startproject ST-GEORGE_RESORT .```
+6. Create App ```python3 manage.py startapp hotel```
+7. In the setting.py file, add to installed apps ```‘hotel’```
+8. Migrate Changes ```python3 manage.py migrate```
+9. Run Server to Test ```python3 manage.py runserver```
+
+### Creating Heroku Application
+
+To create the application I followed the [Django Blog Cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf).
+
+- __In Heroku__
+    1. Create a new
+     Heroku App with location set to Europe.
+    2. Add the Postgres database, located in the resource, add ons tab.
+
+- __In Gitpod__
+
+    3. Create env.py file
+
+- __In env.py__
+
+    4. Import os library ```import os```
+    5. Set environment variables ```os.environ["DATABASE_URL"] = "Heroku DATABASE_URL Link"```
+    6. Add in secret key ```os.environ["SECRET_KEY"] = "Make up a randomSecretKey"```
+
+- __In Heroku__
+
+    7. Add Secret Key to Config Vars SECRET_KEY, “randomSecretKey”
+
+- __In Settings.py__
+
+    8. Reference env.py ```from pathlib import Path```
+                        ```import os```
+                        ```import dj_database_url```
+                        ```if os.path.isfile("env.py"):```
+                        ```import env```
+10. Remove the insecure secret
+key and replace - links to the
+secret key variable on Heroku
+SECRET_KEY = os.environ.get('SECRET_KEY')
+11. Replace DATABASES Section
+(Comment out the old
+DataBases Section)
+- links to the DATATBASE_URL
+variable on Heroku
+DATABASES = {
+'default':
+dj_database_url.parse(os.environ.get("DATABASE_
+URL"))
+}
+
+
+# Acknowledgements
+
+I would like to thanks my mentor Naoise Gaffney for his constant support throughout my project.
